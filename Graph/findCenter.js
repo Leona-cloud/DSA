@@ -19,30 +19,33 @@
     
 // }
 
-function findCenter(edges) {
-    const graph = new Map(); // Adjacency list to represent the graph
-    
+
+function findCenter(edges){
+
+    const graph = new Map();
+
     for (const [u, v] of edges) {
-        if (!graph.has(u)) graph.set(u, []);
-        if (!graph.has(v)) graph.set(v, []);
-        
-        graph.get(u).push(v);
+        if(!graph.has(u)) graph.set(u, [])
+        if(!graph.has(v)) graph.set(v, []);
+
+        graph.get(u).push(v)
         graph.get(v).push(u);
+        
     }
- 
-    for (const [node, neighbors] of graph.entries()) {
-        if (neighbors.length === edges.length) {
-            return node;
+
+    for (const [node, neighors] of graph.entries()) {
+        if(neighors.length === edges.length){
+            return node
         }
-    }
+    };
+
+    return -1
     
-    return -1; // No center found
 }
 
 
 
-edges = [[1,2],[5,1],[1,3],[1,4]]
-const center = findCenter(edges);
-console.log("Center:", center);
 
-findCenter(edges)
+const edges = [[1,2],[5,1],[1,3],[1,4]]
+const center = findCenter(edges);
+console.log('Center', center)
