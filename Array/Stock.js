@@ -15,6 +15,8 @@
 
 var maxProfit = function(prices) {
 
+    // usign two pointer
+
     // [7,1,5,3,6,4]
 
     let left = 0; // left = buy
