@@ -5,6 +5,8 @@ var findJudge = function(n, trust) {
     const trusts = new Array(n + 1).fill(0); // Index 0 is not used
     const trustedBy = new Array(n + 1).fill(0);
 
+    // [[1,3],[2,3]]
+
     for([a, b] of trust){
         trustedBy[a]++;
         trusts[b]++;
