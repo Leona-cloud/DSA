@@ -10,6 +10,8 @@
 
 var productExceptSelf = function(nums) {
 
+    //[1,2,3,4]
+    //[1, 1, 1, 1]
     let res = new Array(nums.length).fill(1);
     let prefix = 1;
 
