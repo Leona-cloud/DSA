@@ -17,7 +17,6 @@ var productExceptSelf = function(nums) {
 
     for (let i = 0; i<nums.length; i++){
         res[i] = prefix
-        console.log(res[i])
         prefix *= nums[i]
     }
    let postfix = 1

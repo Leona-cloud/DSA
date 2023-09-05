@@ -15,7 +15,7 @@ var validMountainArray = function(arr) {
         console.log('here')
 
         if(arr[i] === arr[j]) return false;
-        console.log('here', 'l')
+       
         if((i < greatestElement && j < greatestElement && arr[i] > arr[j]) || (i > greatestElement && j > greatestElement && arr[i] < arr[j])){
             return false
         }

@@ -25,25 +25,19 @@
 var moveZeroes = function (nums) {
   let count = 0;
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] != 0) {
-        nums[count] = nums[i]
+    if (nums[i] !== 0) {
+      nums[count] = nums[i];
       count++;
-    
     }
   }
 
-  for(let i = count; i < nums.length; i++) {
+  for (let i = count; i < nums.length; i++) {
     nums[i] = 0;
-}
-  
-//   for (let i = 0; i < count; i++) {
-//     nums.push(0);
-//   }
+  }
 
-  console.log(count, "c");
   return nums;
 };
 
-const nums = [0,1,0,3,12];
+const nums = [0, 1, 0, 3, 12];
 const moveZero = moveZeroes(nums);
 console.log(moveZero, "here");

@@ -14,6 +14,7 @@ var checkIfExist = function(arr) {
         }
 
         hashMap.set(arr[i], i)
+       
     }
     
   return false
