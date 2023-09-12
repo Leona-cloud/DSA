@@ -22,10 +22,10 @@ var threeSum = function(nums) {
         while(left < right){
             let threesum = a + nums[left] + nums[right];
             if(threesum > 0){
-                right -= 1
+                right--
             }else
                 if(threesum < 0){
-                    left += 1
+                    left ++
                 }
             else{
                 res.push([a, nums[left], nums[right]])

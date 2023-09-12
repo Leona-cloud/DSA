@@ -3,8 +3,10 @@
 
 var checkIfExist = function(arr) {
 
+    // create a new hashMap
     let hashMap = new Map();
 
+    //iterate through the array
     for(let i = 0; i<arr.length; i++){
 
         let element = arr[i];
