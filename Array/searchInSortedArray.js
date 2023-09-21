@@ -20,8 +20,6 @@ var search = function(nums, target) {
             return midPoint;
         };
 
-
-
         if(nums[lowerBound] <= nums[midPoint]){
                 
             if(nums[lowerBound] <= target && target < nums[midPoint]){

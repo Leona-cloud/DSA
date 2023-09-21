@@ -9,8 +9,9 @@ function dailyTemp(temperature) {
   let stack = [];
 
   for (let i = 0; i < n; i++) {
+    // [73,74,75,71,69,72,76,73]
+    // [ 1, 1, 4, 2, 1, 1, 0, 0]
     while (stack.length && temperature[i] > temperature[stack[stack.length - 1]]) {
-        console.log(temperature[stack[stack.length - 1]])
       let index = stack.pop();
       res[index] = i - index;
     } 

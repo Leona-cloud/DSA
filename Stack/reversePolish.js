@@ -22,3 +22,8 @@ var evalRPN = function(tokens) {
     return polishStack.pop()
     
 };
+
+
+const tokens = ["4","13","5","/","+"]
+
+console.log(evalRPN(tokens))

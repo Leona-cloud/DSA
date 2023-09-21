@@ -19,3 +19,10 @@ var containsDuplicate = function(nums) {
 
 const nums = [1,2,3,4];
 console.log(containsDuplicate(nums))
+
+
+const split = "https://open.spotify.com/playlist/66S0KszPK9UM4amvxj4xBI?si=2c6045cd66284f74&nd=1"
+const removeQuestionMark = split.toString().split('/')
+const getId = removeQuestionMark[4].split('?')
+
+console.log(getId[0])
