@@ -64,3 +64,52 @@ cities.display()
  console.log();
  cities.remove("Carlisle");
  cities.display();
+
+
+
+
+ function Node(element){
+  this.element = element;
+  this.next = null;
+}
+
+function MyHashSet(){
+  this.head = new Node('head');
+  this.contains = contains;
+  this.add = add;
+  this.remove = remove;
+
+}
+
+function contains(key){
+  let currentNode = this.head
+  while(currentNode.element !== null){
+     if(currentNode === key){
+         return true
+     }else{
+         return false
+     }
+  }
+}
+
+function add(key){
+  if(!contains(key)){
+      let newNode = new Node(key)
+      let current = this.head
+      while(current.next !== null){
+          current = current.next
+      }
+      current = newNode
+  }
+}
+
+function remove(key){
+  let current = this.head;
+  while(current.next !== null){
+      if(current.next.element === key){
+          current.next = current.next.next;
+          return;
+      }
+      current = current.next
+  }
+}
